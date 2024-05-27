@@ -1,0 +1,48 @@
+﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+		<PropertyGroup>
+			<ProjectGuid>{0EB97317-05C4-4225-B20D-B123354004C7}</ProjectGuid>
+		</PropertyGroup>
+		<ItemGroup>
+			<Projects Include="..\__sc2tv_xml\sc2tv_xml.dproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="Project2.dproj">
+				<Dependencies/>
+			</Projects>
+		</ItemGroup>
+		<ProjectExtensions>
+			<Borland.Personality>Default.Personality.12</Borland.Personality>
+			<Borland.ProjectType/>
+			<BorlandProject>
+				<Default.Personality/>
+			</BorlandProject>
+		</ProjectExtensions>
+		<Target Name="sc2tv_xml">
+			<MSBuild Projects="..\__sc2tv_xml\sc2tv_xml.dproj"/>
+		</Target>
+		<Target Name="sc2tv_xml:Clean">
+			<MSBuild Targets="Clean" Projects="..\__sc2tv_xml\sc2tv_xml.dproj"/>
+		</Target>
+		<Target Name="sc2tv_xml:Make">
+			<MSBuild Targets="Make" Projects="..\__sc2tv_xml\sc2tv_xml.dproj"/>
+		</Target>
+		<Target Name="Project2">
+			<MSBuild Projects="Project2.dproj"/>
+		</Target>
+		<Target Name="Project2:Clean">
+			<MSBuild Targets="Clean" Projects="Project2.dproj"/>
+		</Target>
+		<Target Name="Project2:Make">
+			<MSBuild Targets="Make" Projects="Project2.dproj"/>
+		</Target>
+		<Target Name="Build">
+			<CallTarget Targets="sc2tv_xml;Project2"/>
+		</Target>
+		<Target Name="Clean">
+			<CallTarget Targets="sc2tv_xml:Clean;Project2:Clean"/>
+		</Target>
+		<Target Name="Make">
+			<CallTarget Targets="sc2tv_xml:Make;Project2:Make"/>
+		</Target>
+		<Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+	</Project>

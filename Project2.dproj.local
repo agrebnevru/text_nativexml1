@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2010.05.05 17:50:25.348.pas,C:\Users\Vlad\Documents\RAD Studio\Projects\Unit3.pas=D:\NativeXML\Native.pas</Transaction>
+    <Transaction>2010.05.05 17:50:25.348.dfm,C:\Users\Vlad\Documents\RAD Studio\Projects\Unit3.dfm=D:\NativeXML\Native.dfm</Transaction>
+    <Transaction>2010.05.05 19:07:31.866.dproj,C:\Users\Vlad\Documents\RAD Studio\Projects\Project2.dproj=D:\NativeXML\Project2.dproj</Transaction>
+  </Transactions>
+</BorlandProject>
